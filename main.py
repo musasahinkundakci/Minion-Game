@@ -1,22 +1,22 @@
 def minion_game(string):
-    pointA=0
-    pointB=0
-    stringlist=list(string)
+    listedstring=list(string)
     sayac=0
-    for i in stringlist:
-        if(i.lower()=="a" or i=="e" or i.lower()=="i" or i.lower()=="o" or i.lower()=="u"):
-            
-            pointA+=len(stringlist)-sayac
-            
+    kevin=0
+    stuart=0
+    for i in listedstring:
+        if(i.lower()=="a" or i.lower()=="e" or i.lower()=="i" or i.lower()=="u" or i.lower()=="o"):
+            kevin+=len(listedstring)-sayac
+        
         else:
-            pointB+=len(stringlist)-sayac
-               
-        sayac+=1   
-    if(pointA>pointB):
-        print("Kevin {}".format(pointA))
+            stuart+=len(listedstring)-sayac
+            
+        sayac+=1
+    if(stuart>kevin):
+        print( "Stuart {}".format(stuart))
+    elif(kevin>stuart):
+        print("Kevin {}".format(kevin))
     else:
-        print("Stuart {}".format(pointB))
-                
+        print("Draw")
 
 if __name__ == '__main__':
     s = input()
